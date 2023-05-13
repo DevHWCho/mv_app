@@ -1,13 +1,14 @@
 {
   "files": {
-    "main.css": "/mv_app/static/css/main.528e1e1d.css",
-    "main.js": "/mv_app/static/js/main.07c36a0d.js",
+    "main.css": "/mv_app/static/css/main.d0598da5.css",
+    "main.js": "/mv_app/static/js/main.d62044ee.js",
+    "static/media/nflx_bg.jpg": "/mv_app/static/media/nflx_bg.42ef683f35d3c8eedabb.jpg",
     "index.html": "/mv_app/index.html",
-    "main.528e1e1d.css.map": "/mv_app/static/css/main.528e1e1d.css.map",
-    "main.07c36a0d.js.map": "/mv_app/static/js/main.07c36a0d.js.map"
+    "main.d0598da5.css.map": "/mv_app/static/css/main.d0598da5.css.map",
+    "main.d62044ee.js.map": "/mv_app/static/js/main.d62044ee.js.map"
   },
   "entrypoints": [
-    "static/css/main.528e1e1d.css",
-    "static/js/main.07c36a0d.js"
+    "static/css/main.d0598da5.css",
+    "static/js/main.d62044ee.js"
   ]
 }
