@@ -26,7 +26,7 @@ function Auth() {
   return (
     <div className='authContainer'>
       <nav className="login_nav">
-        <img src={require('../styles/images/logo.png')} alt='movie app logo' className='nav__logo' onClick={() => {window.location.href = "/netflix_app_2023"}} />
+        <img src={require('../styles/images/logo.png')} alt='movie app logo' className='nav__logo' onClick={() => {window.location.href = "/mv_app"}} />
       </nav>
       <div className='login_box'>
         <header className='login_header'>
