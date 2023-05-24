@@ -1,0 +1,256 @@
+$loginBtnColor: #D21312;
+$errorColor: #54B435;
+
+.authContainer {
+  position: relative;
+  width: 100%;
+  height: 1240px;
+  background: url(../styles/images/nflx_bg.jpg) no-repeat;
+  background-size: cover;
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.75);
+    content: '';
+  }
+
+  .login_nav {
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 90px;
+    background: transparent;
+    
+    img {
+      width: 170px;
+    }
+  }
+
+  .login_box {
+    z-index: 99;
+    position: absolute;
+    top: 90px;
+    left: 50%;
+    width: 550px;
+    height: 620px;
+    border-radius: 4px;
+    background-color: rgba(0,0,0,0.8);
+    transform: translateX(-50%);
+  }
+
+  .login_header {
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 16px;
+    color: #fff;
+    transform: translateX(-50%);
+  }
+
+  // input 자동입력 색상 제거
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+  transition: background-color 5000s;
+  -webkit-text-fill-color: #fff !important;
+  }
+
+  .aContainer {
+    position: absolute;
+    top: 130px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    .authInput {
+      width: 460px;
+      border-radius: 4px;
+      padding-left: 20px;
+      background-color: rgba(60,60,60,0.3);
+      box-sizing: border-box;
+    }
+
+    .form_container {
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+
+      .placeId {
+        position: absolute;
+        top: 15px;
+        left: 20px;
+        color: #999;
+        transition: top .1s ease, font .1s ease;
+      }
+      &.on {
+        .placeId {
+          top: 8px;
+          font-size: 12px;
+        }
+      }
+      .id_error {
+        display: none;
+        height: 20px;
+      }
+      &.error {
+        .id_error {
+          display: block;
+          font-size: 13px;
+          color: $errorColor;
+          line-height: 0;
+        }
+        .emailInput {
+          border-bottom: 2px solid $errorColor;
+        }
+      }
+      .emailInput {
+        height: 50px;
+        margin-bottom: 20px;
+        padding-top: 20px;
+        border: 0;
+        font-size: 16px;
+        color: #fff;
+        &:focus {
+          outline: 0;
+        }
+      }
+    }
+    
+    .form_container {
+      .placePw {
+        position: absolute;
+        top: 15px;
+        left: 20px;
+        color: #999;
+        transition: top .1s ease, font .1s ease;
+      }
+      &.on {
+        .placePw {
+          top: 8px;
+          font-size: 12px;
+        }
+      }
+      .pw_error {
+        display: none;
+        height: 20px;
+      }
+
+      &.error {
+        .pw_error {
+          display: block;
+          font-size: 13px;
+          line-height: 0px;
+          color: $errorColor;
+        }
+        .pwInput {
+          border-bottom: 2px solid $errorColor;
+        }
+      }
+      .pwInput {
+        height: 50px;
+        border: 0;
+        margin-bottom: 20px;
+        padding-top: 20px;
+        font-size: 16px;
+        color: #fff;
+        &:focus {
+          outline: 0;
+        }
+      }
+    }
+    
+    .authSubmit {
+      position: relative;
+      width: 100%;
+      height: 50px;
+      margin-top: 20px;
+      padding-left: 0;
+      border: 0;
+      background-color: $loginBtnColor;
+      font-size: 16px;
+      color: #fff;
+      cursor: pointer;
+    }
+  }
+  
+  .authSwitch {
+    z-index: 0;
+    position: absolute;
+    bottom: -60px;
+    left: 50%;
+    display: block;
+    width: 140px;
+    height: 50px;
+    // background-color: #e87c03;
+    border: 0;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+    line-height: 50px;
+    transform: translateX(-50%);
+    cursor: pointer;
+  }
+  .authBtns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 450px;
+    left: 50%;
+    width: 460px;
+    border: 0;
+    transform: translateX(-50%);
+  }
+  .authBtn {
+    width: 460px;
+    height: 50px;
+    border: 0;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  .googleBtn {
+    margin-bottom: 1px;
+    .googleLogo {
+      color: #F45050;
+    }
+  }
+  .githubBtn {
+    .githubLogo {
+      color: #892CDC;
+    }
+  }
+}
+
+.authError {
+  position: absolute;
+  left: 0;
+  color: #ff0000;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+@media screen and (max-width: 570px) {
+  .login_box {
+    width: 400px !important;
+  }
+  .authInput{
+    width: 320px !important;
+  }
+  .authBtns {
+    width: 320px;
+    .authBtn {
+      width: 320px;
+    }
+  }
+}
